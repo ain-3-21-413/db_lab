@@ -1,0 +1,15 @@
+Перенос файлов баз данных MySQL. Ubuntu.
+
+1) Я останавливаю mysql:
+sudo service mysql stop
+
+2) Копирую файлы базы данных в новую директорию:
+sudo cp -r /usr/lib/mysql /backup/mysql/mar_28
+
+3) Переношу также права собственности и разрешения с оригинала на новые файлы:
+sudo chown -R mysql:mysql /backup/mysql/mar_28
+sudo chmod -R 755 /backup/mysql/mar_28
+
+4) Запускаю mysql:
+sudo service mysql start
+
